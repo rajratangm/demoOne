@@ -14,7 +14,7 @@ data = st.session_state.data
 
 st.subheader('Original Data')
 val= data.iloc[:, :-1]
-st.dataframe(val)
+st.dataframe(val,use_container_width=True)
 data['Date'] = pd.to_datetime(data['Date'])
 with st.sidebar:
     st.header('Select data')
