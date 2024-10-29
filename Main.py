@@ -4,8 +4,6 @@ from datetime import datetime, timedelta
 import streamlit as st
 st.set_page_config(page_title="My Streamlit App", page_icon=":sparkles:", layout="wide", initial_sidebar_state="expanded", menu_items={"About": "This is a custom about section."})
 
-
-# Define the initial parameters
 start_date = datetime(2000, 1, 1)
 end_date = datetime(2024, 1, 8)  # You can adjust this to include more days
 scenarios = ['Scenario_A', 'Scenario_B']
@@ -15,9 +13,9 @@ methods = ['TKO', 'SYS',
 'HKR',
 'KNS',
 'CGK']
-data_length = 100  # Total number of rows needed
+data_length = 100  
 
-# Create lists to store generated data
+
 dates = []
 names = []
 scenarios_list = []
@@ -25,7 +23,7 @@ methods_list = []
 values1 = []
 values2 = []
 
-# Generate data
+
 for i in range(data_length):
     current_date = start_date + timedelta(days=i // 4)  
     if i < 50:  
@@ -33,15 +31,15 @@ for i in range(data_length):
     else:  
         name = 'BC_Jan22_Aug24_G6WithRe'
     
-    # Alternate scenarios and methods
+  
     scenario = scenarios[i % 2]
     method = methods[i % 2]
     
-    # Generate random float values
-    value1 = round(45 + i * 0.5, 8)  # Just an example increment for values
-    value2 = round(np.random.uniform(0, 1000), 8)  # Random value for the second column
+    
+    value1 = round(45 + i * 0.5, 8)  
+    value2 = round(np.random.uniform(0, 1000), 8) 
 
-    # Append generated data to lists
+   
     dates.append(current_date.strftime('%m-%d-%Y'))
     names.append(name)
     scenarios_list.append(scenario)
@@ -49,7 +47,7 @@ for i in range(data_length):
     values1.append(value1)
     values2.append(value2)
 
-# Create a DataFrame
+
 df = pd.DataFrame({
     'Date': dates,
     'Job': names,
@@ -59,11 +57,25 @@ df = pd.DataFrame({
     'FundamentalValues': values2
 })
 
-# Display the DataFrame
 
 
-st.session_state.data =  df
+##--------------------------------------------------------------------------------------------------------------
+# Note:- for now a random data genration code is used this can be changed for API or csv with simple modifications code will not change much
+# FOR CSV:-
 # pd.read_csv('small_sample.csv')
+# FOR API:-
+#def fetch_data(api_url):
+    # try:
+    #     response = requests.get(api_url)
+    #     response.raise_for_status()  # Raise an error for bad responses
+    #     return response.json()  # Return the JSON data
+    # except requests.exceptions.RequestException as e:
+    #     st.error(f"Error fetching data: {e}")
+    #     return None
+##-----------------------------------------------------------------------------------------------------------------
+st.session_state.data =  df
+
+
 
 
 
