@@ -1,6 +1,6 @@
 import streamlit as st 
 
-st.image('assets\jera.jpg')
+
 st.markdown("""
 
 
@@ -44,6 +44,6 @@ Generation Model - System Overview
 
 """)
 
-st.image('assets\jero_flow.jpg')
+
 
 # st.write(st.session_state.description.DESCR)
