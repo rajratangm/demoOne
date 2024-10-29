@@ -56,46 +56,6 @@ fVal = filtered_data.iloc[:, :-1]
 st.dataframe(fVal, use_container_width=True)
 
 
-# def plot_graphs(filtered_data):
-#     # Check if there is any data to plot
-#     if filtered_data.empty:
-#         st.warning("No data available for the selected filters.")
-#         return
-    
-#     # Convert Date column to datetime if it isn’t already
-#     if not pd.api.types.is_datetime64_any_dtype(filtered_data['Date']):
-#         filtered_data['Date'] = pd.to_datetime(filtered_data['Date'])
-
-#     # Create the plotly figure
-#     fig = go.Figure()
-
-#     # Add a line for each variable except the specified non-numeric columns
-#     for column in filtered_data.columns:
-#         if column not in ['Date', 'Job', 'Scenario', 'Area']:  # Skip non-numeric columns
-#             fig.add_trace(go.Scatter(x=filtered_data['Date'], y=filtered_data[column],
-#                                      mode='lines', name=column))
-
-#     # Update layout for title, labels, and x-axis rotation
-#     fig.update_layout(
-#         title="Graphs of Different Variables Over Time",
-#         xaxis_title="Date",
-#         yaxis_title="Values",
-#         xaxis=dict(tickangle=45),
-#         legend_title="Variables",
-#         template="plotly_white",
-#         width=800,
-#         height=500
-#     )
-
-#     # Display the plot in Streamlit
-#     st.plotly_chart(fig)
-# plot_graphs(filtered_data)
-
-
-import streamlit as st
-import pandas as pd
-import plotly.graph_objects as go
-
 def plot_graphs(filtered_data):
     # Check if there is any data to plot
     if filtered_data.empty:
@@ -127,7 +87,7 @@ def plot_graphs(filtered_data):
             )
             
             # Display each plot in Streamlit
-            st.plotly_chart(fig)
+            st.plotly_chart(fig,use_container_width=True)
 
 # Example of how to call the function with filtered data
 plot_graphs(filtered_data)
