@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
@@ -29,10 +27,10 @@ values2 = []
 
 # Generate data
 for i in range(data_length):
-    current_date = start_date + timedelta(days=i // 4)  # Change every 4 entries
-    if i < 50:  # For the first half
+    current_date = start_date + timedelta(days=i // 4)  
+    if i < 50:  
         name = 'BC_Jan22_Aug24_G6WithRe...'
-    else:  # For the second half
+    else:  
         name = 'BC_Jan22_Aug24_G6WithRe'
     
     # Alternate scenarios and methods
@@ -69,6 +67,7 @@ st.session_state.data =  df
 
 
 
+# for now stationary icons are used but later it will be replcaed by Streamlit Icon codes
 home = st.Page(
     page = 'pages/Home.py',
     title='🏠 Home ',
