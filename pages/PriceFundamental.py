@@ -32,8 +32,11 @@ with st.sidebar:
 
 
 data = st.session_state.data
+
+
 st.subheader('Original Data')
-st.dataframe(data)
+val= data.iloc[:, :-1]
+st.dataframe(val)
 data['Date'] = pd.to_datetime(data['Date'])
 
 filtered_data = data[
@@ -46,7 +49,8 @@ filtered_data = data[
 
 # Display the filtered DataFrame
 st.subheader('Filtered Data')
-st.dataframe(filtered_data)
+fVal = filtered_data.iloc[:, :-1]
+st.dataframe(fVal)
 
 
 def plot_graphs(filtered_data):
@@ -72,4 +76,5 @@ def plot_graphs(filtered_data):
     st.pyplot(plt)  # Display the plot in the Streamlit app
 
 # Call the function to plot the graphs
+fVal= filtered_data.iloc[:, :-1]
 plot_graphs(filtered_data)
