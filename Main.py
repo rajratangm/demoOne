@@ -8,10 +8,15 @@ st.set_page_config(page_title="My Streamlit App", page_icon=":sparkles:", layout
 
 
 # Define the initial parameters
-start_date = datetime(2024, 1, 1)
+start_date = datetime(2000, 1, 1)
 end_date = datetime(2024, 1, 8)  # You can adjust this to include more days
 scenarios = ['Scenario_A', 'Scenario_B']
-methods = ['TKO', 'SYS']
+methods = ['TKO', 'SYS',
+'HKD,'
+'CHB',
+'HKR',
+'KNS',
+'CGK']
 data_length = 100  # Total number of rows needed
 
 # Create lists to store generated data
