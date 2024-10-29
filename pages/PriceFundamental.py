@@ -32,7 +32,7 @@ with st.sidebar:
 
 
 data = st.session_state.data
-
+st.subheader('Original Data')
 st.dataframe(data)
 data['Date'] = pd.to_datetime(data['Date'])
 
@@ -45,6 +45,7 @@ filtered_data = data[
 ]
 
 # Display the filtered DataFrame
+st.subheader('Filtered Data')
 st.dataframe(filtered_data)
 
 
