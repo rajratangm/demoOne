@@ -11,11 +11,13 @@ st.header('Price and Fundamentals')
 
 data = st.session_state.data
 
-
 st.subheader('Original Data')
+
 val= data.iloc[:, :-1]
 st.dataframe(val,use_container_width=True)
+
 data['Date'] = pd.to_datetime(data['Date'])
+
 with st.sidebar:
     st.header('Select data')
     st.write('Use the widget belo to explore the generation model')
@@ -89,7 +91,6 @@ def plot_graphs(filtered_data):
             # Display each plot in Streamlit
             st.plotly_chart(fig,use_container_width=True)
 
-# Example of how to call the function with filtered data
 plot_graphs(filtered_data)
 
 
