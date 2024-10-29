@@ -7,10 +7,7 @@ import streamlit as st
 # Display the online image
 st.image(image_url,)
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 3a12de3b8288cb4c6d575a114357f19dbf6b3d45
 st.markdown("""
 
 
