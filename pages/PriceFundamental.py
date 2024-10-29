@@ -53,7 +53,7 @@ filtered_data = data[
 # Display the filtered DataFrame
 st.subheader('Filtered Data')
 fVal = filtered_data.iloc[:, :-1]
-st.dataframe(fVal)
+st.dataframe(fVal, use_container_width=True)
 
 
 # def plot_graphs(filtered_data):
