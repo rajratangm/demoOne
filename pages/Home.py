@@ -51,7 +51,7 @@ Generation Model - System Overview
 
 """ )
 
-st.image('jera_flow.jpg')
+st.image('jero_flow.jpg')
 
 
 
