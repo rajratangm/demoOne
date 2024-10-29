@@ -4,9 +4,6 @@ st.image('jera.jpg')
 
 
 st.markdown("""
-
-
-0
 Generation Model UI ⚡
 Welcome to the Generation Model UI! 👋 This app enables the user to analyse results generated with the Generation Model, as well as to launch runs.
 The app is divided into several sections, each of which focuses on a different aspect of the model:
@@ -39,10 +36,6 @@ Generation model batch service - repository (JapanGenerationModelDocker) and app
 Input generation package - repository (GenerationModelInputs)
 Supply and demand model package - repository (Japan_GenerationModel)
 Generation Model - System Overview
-
-0
-
-
 
 """ )
 
