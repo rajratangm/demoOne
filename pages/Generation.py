@@ -9,7 +9,7 @@ selected = option_menu(
     options=['Generation option1','Generation option2','','',], 
     orientation='horizontal',
     styles={
-        "container":{'background-color':'white','display':'flex','justify-content':'flex-start','weight':'100px'},
+        "container":{'background-color':'white'},
         "text":{'color':'black'},
         'nav-link':{'border-bottom':'3px solid lightgray', 'color':'black', 'border-radius':'0px'},
         'nav-link-selected':{'border-bottom':'3px solid red', 'background-color':'white'},
