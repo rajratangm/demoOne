@@ -1,22 +1,18 @@
-
-
+import streamlit as st
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
-import streamlit as st
-st.set_page_config(page_title="My Streamlit App", page_icon=":sparkles:", layout="wide", initial_sidebar_state="expanded", menu_items={"About": "This is a custom about section."})
+import config
+import os 
+import requests
+# from streamlit_notification_center_component import notification_center
 
 
 # Define the initial parameters
-start_date = datetime(2000, 1, 1)
+start_date = datetime(2024, 1, 1)
 end_date = datetime(2024, 1, 8)  # You can adjust this to include more days
 scenarios = ['Scenario_A', 'Scenario_B']
-methods = ['TKO', 'SYS',
-'HKD,'
-'CHB',
-'HKR',
-'KNS',
-'CGK']
+methods = ['TKO', 'SYS']
 data_length = 100  # Total number of rows needed
 
 # Create lists to store generated data
@@ -64,56 +60,59 @@ df = pd.DataFrame({
 # Display the DataFrame
 
 
-st.session_state.data =  df
-# pd.read_csv('small_sample.csv')
+# if config.API_KEY:
+#     response = requests.get(config.API_KEY)
+#     if(response.status==200):
 
+# df = pd.DataFrame([])
+st.session_state.data =  df
 
 
 home = st.Page(
     page = 'pages/Home.py',
-    title='🏠 Home ',
+    title='Home ',
 )
 
 priceFundamental = st.Page(
     page = 'pages/PriceFundamental.py',
-    title= ' 🗾 Price and Fundamental data'
+    title= ' Price and Fundamental data'
 )
 
 Generation = st.Page(
     page = 'pages/Generation.py',
-    title='🏭 Generation'
+    title='Generation'
 )
 
 LoadFactors = st.Page(
     page = 'pages/LoadFactor.py',
-    title= '💡 Load Factors'
+    title= 'Load Factors'
 )
 Flows = st.Page(
     page = 'pages/Flows.py',
-    title= '↔️ Flows'
+    title= 'Flows'
 )
 Fuels = st.Page(
     page = 'pages/Fuels.py',
-    title= '🚢 Fuels'
+    title= 'Fuels'
 )
 SubmitRuns = st.Page(
     page = 'pages/SubmitRuns.py',
-    title= '📥 Submit runs'
+    title= 'Submit runs'
 )
 
 CalndarCreation = st.Page(
     page = 'pages/CalenderCreation.py',
-    title= '	📆 Calendar Creation'
+    title= 'Calendar Creation'
 )
 
 Calibration = st.Page(
     page = 'pages/Calibration.py',
-    title= '🔌 Calibration'
+    title= 'Calibration'
 )
 
 WeatherPaths = st.Page(
     page = 'pages/WeatherPaths.py',
-    title= '💡 Weather Paths'
+    title= 'Weather Paths'
 )
 
 pg = st.navigation(
