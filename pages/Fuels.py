@@ -18,7 +18,7 @@ selected = option_menu(
 
     }
 )
-
+st.header('selected')
 if selected=='Fuel Option1':
     st.title('You have selected Fuel Option1 ')
 if selected=='Fuel Option2':
