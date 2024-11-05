@@ -1,7 +1,7 @@
 import streamlit as st 
 st.set_page_config(page_icon="🔌")
 
-st.set_page_config(layout='centered')
+
 
 st.title('Weather Paths')
 
