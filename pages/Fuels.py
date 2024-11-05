@@ -6,7 +6,7 @@ st.title('Fuel')
 selected = option_menu(
     menu_title=None,
     icons=['k','d','l','kp'],
-    options=['Fuel Option1','Fuel Option2','',''], 
+    options=['Option1','Option2','',''], 
     orientation='horizontal',
     styles={
         "container":{'background-color':'white','display':'flex','justify-content':'flex-start','weight':'100px'},
@@ -18,9 +18,10 @@ selected = option_menu(
 
     }
 )
-st.header('selected')
-if selected=='Fuel Option1':
+
+if selected=='Option1':
     st.title('You have selected Fuel Option1 ')
-if selected=='Fuel Option2':
+    st.checkbox('show dashboard')
+if selected=='Option2':
     st.title('You have selected Fuel Option2')
 
