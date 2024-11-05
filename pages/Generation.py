@@ -13,7 +13,7 @@ selected = option_menu(
         "text":{'color':'black'},
         'nav-link':{'border-bottom':'3px solid lightgray', 'color':'black', 'border-radius':'0px'},
         'nav-link-selected':{'border-bottom':'3px solid red', 'background-color':'white'},
-        'nav-link-contact':{'margin-right':'auto','padding-rght':'50px'}
+        
         
 
     }
