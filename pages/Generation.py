@@ -11,7 +11,7 @@ selected = option_menu(
     styles={
         "container":{'background-color':'white'},
         "text":{'color':'black'},
-        'nav-link':{'border-bottom':'3px solid lightgray', 'color':'black', 'border-radius':'0px'},
+        'nav-link':{'border-bottom':'3px solid lightgray', 'color':'black', 'border-radius':'0px', 'flex':'1'},
         'nav-link-selected':{'border-bottom':'3px solid red', 'background-color':'white'},
         
         
