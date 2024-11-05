@@ -7,6 +7,16 @@ st.set_page_config(page_icon="🗾")
 
 st.header('Price and Fundamentals')
 
+
+data = st.session_state.data
+
+st.subheader('Original Data')
+
+val= data.iloc[:, :-1]
+st.dataframe(val,use_container_width=True)
+
+data['Date'] = pd.to_datetime(data['Date'])
+
 with st.sidebar:
     st.header('Select data')
     st.write('Use the widget belo to explore the generation model')
@@ -47,7 +57,8 @@ filtered_data = data[
 
 # Display the filtered DataFrame
 st.subheader('Filtered Data')
-st.dataframe(filtered_data)
+fVal = filtered_data.iloc[:, :-1]
+st.dataframe(fVal, use_container_width=True)
 
 
 def plot_graphs(filtered_data):
@@ -62,15 +73,24 @@ def plot_graphs(filtered_data):
     # Plotting each variable over time
     for column in filtered_data.columns:
         if column not in ['Date', 'Job', 'Scenario', 'Area']:  # Skip non-numeric columns
-            plt.plot(filtered_data['Date'], filtered_data[column], label=column)
-    
-    plt.title('Graphs of Different Variables Over Time')
-    plt.xlabel('Date')
-    plt.ylabel('Values')
-    plt.legend()
-    plt.xticks(rotation=45)
-    plt.tight_layout()  # Adjust layout to make room for the rotated labels
-    st.pyplot(plt)  # Display the plot in the Streamlit app
+            fig = go.Figure()
+            
+            # Create line plot for the specific column
+            fig.add_trace(go.Scatter(x=filtered_data['Date'], y=filtered_data[column],
+                                     mode='lines', name=column))
 
-# Call the function to plot the graphs
+            # Update layout for each plot
+            fig.update_layout(
+                title=f"Graph of {column} Over Time",
+                xaxis_title="Date",
+                yaxis_title=column,
+                xaxis=dict(tickangle=45),
+                template="plotly_white",
+                width=800,
+                height=400
+            )
+            
+            # Display each plot in Streamlit
+            st.plotly_chart(fig,use_container_width=True)
+
 plot_graphs(filtered_data)

@@ -1,11 +1,9 @@
 import streamlit as st 
+# Display the online image
+st.image('jera.jpg')
 
-st.set_page_config(page_icon='🏠', layout='centered')
-st.image('assets\jera.jpg')
+
 st.markdown("""
-
-
-0
 Generation Model UI ⚡
 Welcome to the Generation Model UI! 👋 This app enables the user to analyse results generated with the Generation Model, as well as to launch runs.
 The app is divided into several sections, each of which focuses on a different aspect of the model:
@@ -39,12 +37,5 @@ Input generation package - repository (GenerationModelInputs)
 Supply and demand model package - repository (Japan_GenerationModel)
 Generation Model - System Overview
 
-0
+""" )
 
-
-
-""")
-
-st.image('assets\jero_flow.jpg')
-
-# st.write(st.session_state.description.DESCR)
