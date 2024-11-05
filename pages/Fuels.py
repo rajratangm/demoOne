@@ -2,7 +2,7 @@ from streamlit_option_menu import option_menu
 import streamlit as st 
 
 
-col1, col2, col3 = st.columns(3)
+st.title('Fuel')
 selected = option_menu(
     menu_title=None,
     icons=['k','d','l','kp'],
