@@ -5,7 +5,7 @@ import streamlit as st
 col1, col2, col3 = st.columns(3)
 selected = option_menu(
     menu_title=None,
-    icons=['k','d','l','p,'d],
+    icons=['k','d','l','p,'o],
     options=['Fuel Option1','Fuel Option2','','',''], 
     orientation='horizontal',
     styles={
