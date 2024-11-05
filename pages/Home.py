@@ -1,6 +1,6 @@
 import streamlit as st 
 # Display the online image
-st.image('assets\jera.jpg')
+# st.image('assets\jera.jpg')
 
 
 st.markdown("""
