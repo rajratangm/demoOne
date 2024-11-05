@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Set the page configuration
-st.set_page_config(page_icon="🏭")
+st.set_page_config(page_icon="🚢")
 
 # Set the header
 st.header('Generation')
