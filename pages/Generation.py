@@ -6,7 +6,7 @@ col1, col2, col3 = st.columns(3)
 selected = option_menu(
     menu_title=None,
     icons=['k','d','l','t','tr'],
-    options=['Generation option1','Generation option2','','',], 
+    options=['option1','option2','','',], 
     orientation='horizontal',
     styles={
         "container":{'background-color':'white'},
