@@ -9,11 +9,11 @@ selected = option_menu(
     options=['Fuel Option1','Fuel Option2','','',''], 
     orientation='horizontal',
     styles={
-        "container":{'background-color':'white','display':'flex','justify-content':'flex-start','weight':'100px'},
+        "container":{'background-color':'white','display':'flex','justify-content':'flex-start'},
         "text":{'color':'black'},
         'nav-link':{'border-bottom':'3px solid lightgray', 'color':'black', 'border-radius':'0px'},
         'nav-link-selected':{'border-bottom':'3px solid red', 'background-color':'white'},
-        'nav-link-contact':{'margin-right':'auto','padding-rght':'50px'}
+        'nav-link-contact':{'margin-right':'auto'}
         
 
     }
