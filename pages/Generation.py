@@ -19,9 +19,10 @@ selected = option_menu(
     }
 )
 
-if selected=='Generation option1':
-    st.title('You have selected Home ')
-    st.checkbox('show all options')
-if selected=='Generation option2':
-    st.title('You have selected Projects')
+if selected=='option1':
+    st.title('You have selected generation unit ')
+    st.checkbox('show all Generation Unit')
+
+if selected=='option2':
+    st.title('You have selected Generation option2')
 
