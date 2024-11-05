@@ -5,8 +5,8 @@ import streamlit as st
 col1, col2, col3 = st.columns(3)
 selected = option_menu(
     menu_title=None,
-    icons=['k','d','l'],
-    options=['Home','Projects','Contact','',], 
+    icons=['k','d','l','t','tr'],
+    options=['Generation option1','Generation option2','','',], 
     orientation='horizontal',
     styles={
         "container":{'background-color':'white','display':'flex','justify-content':'flex-start','weight':'100px'},
@@ -19,9 +19,9 @@ selected = option_menu(
     }
 )
 
-if selected=='Home':
+if selected=='Generation option1':
     st.title('You have selected Home ')
-if selected=='Projects':
+    st.checkbox('show all options')
+if selected=='Generation option2':
     st.title('You have selected Projects')
-if selected =='Contact':
-    st.title('you have selected contacts')
+
