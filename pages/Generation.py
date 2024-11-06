@@ -20,9 +20,36 @@ selected = option_menu(
 )
 
 if selected=='option1':
-    st.title('You have selected generation unit ')
-    st.checkbox('show all Generation Unit')
+    st.header('You have selected generation unit ')
+    st.checkbox('show all Unit')
+    if st.session_state.data:
+        st.text_input('Enter units separated by white space', help='Units enting')
+        st.text_input('Or select units from the list', help='Select units from list')
+        st.checkbox('Load actual generation data', help='load actualt data')
+        st.checkbox('load unit costs', help='load unit costs')
+        st.selectbox('Select plants', options=[
+                    "TokaiDaini",
+                    "Kashiwazaki",
+                    "NakosoIGCC",
+                    "Hitachinaka",
+                    "Hirono",
+                    "ShinHitachinaka",
+                    "ShinYokosuka",
+                    "Isogo",
+                    "Nakoso"
+                ])
+        st.checkbox('Show distribution', help='show distribution')
 
 if selected=='option2':
-    st.title('You have selected Generation option2')
+    st.header('Generation by Fuel')
+    st.selectbox('Select fuel types from the list', options=[
+                "LNG",
+                "COAL",
+                "OIL",
+                "FOREX",
+                "NUCLEAR",
+                "JWLNG",
+                "OTHER"
+            ], help='Select guel types')
+    st.checkbox('show distribution', help='Show distribution')
 
