@@ -22,7 +22,7 @@ selected = option_menu(
 if selected=='option1':
     st.header('You have selected generation unit ')
     st.checkbox('show all Unit')
-    if st.session_state.data:
+    if not st.session_state.data.empty:
         st.text_input('Enter units separated by white space', help='Units enting')
         st.text_input('Or select units from the list', help='Select units from list')
         st.checkbox('Load actual generation data', help='load actualt data')
