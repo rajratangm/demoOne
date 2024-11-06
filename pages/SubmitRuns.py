@@ -73,7 +73,7 @@ if st.checkbox('Custom as of dates for weaher scenarios', help='Custom as of dat
                 "1 - First Upload using EDFTs data",
                 "1 - First Upload using EDFTs data",
                 "1 - First Upload using EDFTs data",
-                "1 - First Uploa"
+                "1 - First Uploa      " 
             ])
     with col4:
         st.selectbox('Select as of date for Commodities', options=['2023-10-04 00:00:00'])
