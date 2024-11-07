@@ -2,6 +2,8 @@ from streamlit_option_menu import option_menu
 import streamlit as st 
 
 
+
+st.set_page_config(page_icon='🏭')
 st.title('Generation')
 selected = option_menu(
     menu_title=None,
