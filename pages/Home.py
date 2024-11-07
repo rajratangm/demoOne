@@ -2,7 +2,7 @@ import streamlit as st
 # Display the online image
 # st.image('assets\jera.jpg')
 
-# st.set_page_config(page_icon='🏚️')
+st.set_page_config(page_icon=None)
 
 st.markdown("""
 Generation Model UI ⚡
