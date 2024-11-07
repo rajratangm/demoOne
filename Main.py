@@ -86,7 +86,7 @@ st.session_state.data =  df
 # for now stationary icons are used but later it will be replcaed by Streamlit Icon codes
 home = st.Page(
     page = 'pages/Home.py',
-    title='Home ',
+    title='	🏚️ Home ',
 )
 
 priceFundamental = st.Page(
