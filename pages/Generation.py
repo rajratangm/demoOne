@@ -3,7 +3,7 @@ import streamlit as st
 
 
 
-st.set_page_config(page_icon='🏭')
+st.set_page_config(page_icon='🏭', page_title='Generation')
 st.title('Generation')
 selected = option_menu(
     menu_title=None,
