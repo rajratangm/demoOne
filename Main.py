@@ -7,6 +7,7 @@ import os
 import requests
 import streamlit_option_menu
 # from streamlit_notification_center_component import notification_center
+st.page_config(page_icon='🌟')
 
 start_date = datetime(2000, 1, 1)
 end_date = datetime(2024, 1, 8)  # You can adjust this to include more days
