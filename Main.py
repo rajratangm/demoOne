@@ -88,6 +88,7 @@ st.session_state.data =  df
 home = st.Page(
     page = 'pages/Home.py',
     title='	🏚️ Home ',
+    page_icon='🏚️'
 )
 
 priceFundamental = st.Page(
