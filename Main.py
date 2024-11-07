@@ -91,17 +91,17 @@ home = st.Page(
 
 priceFundamental = st.Page(
     page = 'pages/PriceFundamental.py',
-    title= ' Price and Fundamental data'
+    title= '🗾 Price and Fundamental data'
 )
 
 Generation = st.Page(
     page = 'pages/Generation.py',
-    title='Generation'
+    title='🏭 Generation'
 )
 
 LoadFactors = st.Page(
     page = 'pages/LoadFactor.py',
-    title= 'Load Factors'
+    title= '🌩️ Load Factors'
 )
 Flows = st.Page(
     page = 'pages/Flows.py',
@@ -109,7 +109,7 @@ Flows = st.Page(
 )
 Fuels = st.Page(
     page = 'pages/Fuels.py',
-    title= 'Fuels'
+    title= '↔️ Fuels'
 )
 SubmitRuns = st.Page(
     page = 'pages/SubmitRuns.py',
@@ -118,12 +118,12 @@ SubmitRuns = st.Page(
 
 CalndarCreation = st.Page(
     page = 'pages/CalenderCreation.py',
-    title= 'Calendar Creation'
+    title= '📆 Calendar Creation'
 )
 
 Calibration = st.Page(
     page = 'pages/Calibration.py',
-    title= 'Calibration'
+    title= '🔌 Calibration'
 )
 
 WeatherPaths = st.Page(
