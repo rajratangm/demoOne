@@ -1,5 +1,5 @@
 import streamlit as st 
-st.set_page_config(page_icon="📆")
+st.set_page_config(page_icon="📆", page_title='Calender')
 st.title('Calender Creation')
 
 with st.sidebar:
