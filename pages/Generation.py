@@ -9,7 +9,7 @@ st.set_page_config(page_icon='🏭', page_title='Generation')
 st_example = st.container(border=False)
 st_example.markdown("### st-link-analysis: Extended Example")
 tabs = st_example.tabs(["Generation 1", "Generation 2"])
-st.title('Generation')
+
 
 
 with tabs[0]:
