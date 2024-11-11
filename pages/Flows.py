@@ -3,7 +3,7 @@ from datetime import datetime
 import pandas as pd 
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_icon="↔️", page_title='Flows")
+st.set_page_config(page_icon="↔️", page_title="Flows")
 st.header('Price and Fundamentals')
 
 with st.sidebar:
