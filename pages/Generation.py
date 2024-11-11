@@ -4,6 +4,11 @@ import streamlit as st
 
 
 st.set_page_config(page_icon='🏭', page_title='Generation')
+
+
+st_example = st.container(border=False)
+st_example.markdown("### st-link-analysis: Extended Example")
+tabs = st_example.tabs(["Generation 1", "Generation 2"])
 st.title('Generation')
 selected = option_menu(
     menu_title=None,
@@ -21,7 +26,7 @@ selected = option_menu(
     }
 )
 
-if selected=='option1':
+with tabs[0]:
     st.header('You have selected generation unit ')
     st.checkbox('show all Unit')
     if not st.session_state.data.empty:
@@ -42,7 +47,7 @@ if selected=='option1':
                 ])
         st.checkbox('Show distribution', help='show distribution')
 
-if selected=='option2':
+with tabs[1]:
     st.header('Generation by Fuel')
     st.selectbox('Select fuel types from the list', options=[
                 "LNG",
