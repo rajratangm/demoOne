@@ -7,7 +7,7 @@ from st_link_analysis.component.icons import SUPPORTED_ICONS
 
 
 # -------- App --------
-st_example = st.container(border=True)
+st_example = st.container(border=False)
 st_example.markdown("### st-link-analysis: Extended Example")
 tabs = st_example.tabs(["Fuel option 1", "Fuel Option 2"])
 
