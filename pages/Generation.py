@@ -10,21 +10,7 @@ st_example = st.container(border=False)
 st_example.markdown("### st-link-analysis: Extended Example")
 tabs = st_example.tabs(["Generation 1", "Generation 2"])
 st.title('Generation')
-selected = option_menu(
-    menu_title=None,
-    icons=['k','d','l','t','tr'],
-    options=['option1','option2','','',], 
-    orientation='horizontal',
-    styles={
-        "container":{'background-color':'white'},
-        "text":{'color':'black'},
-        'nav-link':{'border-bottom':'3px solid lightgray', 'color':'black', 'border-radius':'0px', 'flex':'1'},
-        'nav-link-selected':{'border-bottom':'3px solid red', 'background-color':'white'},
-        
-        
 
-    }
-)
 
 with tabs[0]:
     st.header('You have selected generation unit ')
